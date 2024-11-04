@@ -1,0 +1,397 @@
+$color1: #050409;
+$color2: #33FF00;
+$color3: #FFFFFF;
+$color4: #9d9a9a;
+$color5: #151515;
+$color6: #d9d9d9;
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 28px 0;
+    flex-wrap: wrap;
+
+    img {
+        width: 180px;
+        height: 45px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+
+        @media (max-width:830px) {
+            display: none;
+        }
+    }
+
+    >ul:nth-child(2) {
+        a {
+            font-size: 24px;
+            color: $color3;
+            transition: .4s;
+
+            &:hover {
+                text-shadow: 1px 0px 3px $color2;
+            }
+        }
+    }
+
+    >div:nth-child(3)>ul {
+        a {
+            font-size: 18px;
+            color: $color2;
+        }
+
+        button {
+            background-color: $color1;
+            border: 2px solid $color2;
+            border-radius: 20px;
+            color: $color3;
+            padding: 7px 20px;
+        }
+    }
+
+    .submenu {
+        width: 60px;
+        height: 50px;
+        padding: 15px 14px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        span {
+            height: 3px;
+            background-color: $color3;
+            border-radius: 2px;
+        }
+
+        >div {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            width: 100%;
+            gap: 2px;
+
+            >span {
+                height: 3px;
+                background-color: $color3;
+                border-radius: 2px;
+            }
+        }
+
+        >span:nth-child(2) {
+            width: 80%;
+        }
+
+        >span:nth-child(3) {
+            width: 60%;
+        }
+
+        @media (max-width:830px) {
+            display: flex;
+        }
+    }
+}
+
+.section-1 {
+    width: 100%;
+    min-height: 924px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Istok Web", sans-serif;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+
+    .section-div1 {
+        width: clamp(200px, 100%, 610px);
+        display: grid;
+        gap: 30px;
+
+        >div:nth-child(1) {
+            font-size: clamp(25px, 5vw, 60px);
+
+            span {
+                color: $color2;
+            }
+        }
+
+        >div:nth-child(2) {
+            font-size: clamp(14px, 5vw, 18px);
+        }
+
+        button {
+            background-color: $color2;
+            border-radius: 4px;
+            color: $color1;
+            padding: 10px 20px;
+        }
+    }
+
+    .section-div2 {
+        position: relative;
+
+        >.img1 {
+            position: relative;
+            width: clamp(200px, 100%, 570px);
+            height: clamp(200px, 100vw, 570px);
+            left: -10px;
+            top: 20px;
+            z-index: 1;
+        }
+
+        >.img {
+            width: clamp(200px, 80%, 424px);
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+
+    .im1 {
+        position: absolute;
+        left: 0;
+        top: 5%;
+
+        @media (max-width:770px) {
+            display: none;
+        }
+    }
+
+    .im2 {
+        position: absolute;
+        right: 0;
+        top: 5%;
+
+        @media (max-width:700px) {
+            display: none;
+        }
+    }
+
+    .im3 {
+        position: absolute;
+        bottom: 0;
+        right: 25%;
+        z-index: 5;
+
+        @media (max-width:900px) {
+            display: none;
+        }
+    }
+
+    .im4 {
+        position: absolute;
+        bottom: 0;
+        z-index: 5;
+        left: 10%;
+    }
+
+    .im5 {
+        position: absolute;
+        bottom: 15%;
+        left: 20%;
+    }
+
+    .im6 {
+        position: absolute;
+        bottom: 20%;
+        left: 40%;
+    }
+}
+
+.section-2 {
+    width: 100%;
+    min-height: 652px;
+    font-family: "Istok Web", sans-serif;
+    display: grid;
+    padding: 20px;
+
+    h2 {
+        padding: 58px 0;
+        text-align: center;
+        font-size: clamp(25px, 5vw, 40px);
+    }
+
+    >div {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        >div:nth-child(1) {
+            position: relative;
+            width: clamp(200px, 90%, 496px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 18px;
+
+            >img {
+                position: absolute;
+                right: -230px;
+                top: 50px;
+                width: clamp(100px, 60%, 307px);
+
+                @media (max-width:970px) {
+                    right: -190px;
+                }
+
+                @media (max-width:920px) {
+                    right: -160px;
+                }
+
+                @media (max-width:840px) {
+                    display: none;
+                }
+            }
+
+            >div>p:nth-child(1) {
+                font-size: clamp(14px, 5vw, 32px);
+                color: $color2;
+                font-weight: 700;
+            }
+
+            >div>p:nth-child(2) {
+                font-size: clamp(14px, 5vw, 32px);
+                font-weight: 700;
+            }
+
+            >p {
+                font-size: clamp(12px, 5vw, 16px);
+                text-align: justify;
+                line-height: 23.03px;
+                font-weight: 400;
+            }
+
+            button {
+                background-color: $color2;
+                border-radius: 4px;
+                color: $color1;
+                font-size: 22px;
+                padding: 12px 20px;
+            }
+        }
+
+        >div:nth-child(2) {
+            img {
+                border-radius: 80px 0;
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+.section-3 {
+    width: 100%;
+    min-height: 497px;
+    display: grid;
+    padding: 20px;
+    font-family: "Istok Web", sans-serif;
+
+    h2 {
+        padding: 58px 0;
+        text-align: center;
+        font-size: clamp(25px, 5vw, 40px);
+    }
+
+    >div {
+        width: clamp(200px, 95%, 1199px);
+        gap: 40px;
+        display: grid;
+        margin: auto;
+        overflow-x: hidden;
+        scrollbar-color: #0000;
+        grid-template-columns: repeat(6, 299px);
+        scroll-behavior: smooth;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
+        >div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            border-radius: 8px;
+            background-color: $color5;
+            >div:nth-child(1) {
+                border-radius: 8px;
+                width: 259px;
+                height: 226px;
+                overflow: hidden;
+
+                >img {
+                    width: 100%;
+                    user-select: none;
+                    cursor: context-menu;
+                    pointer-events: none;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+
+                }
+            }
+            >div:nth-child(2){
+                width: 259px;
+                background-color: #d9d9d930;
+                border-radius: 8px;
+                display:  flex;
+                padding: 10px 20px;
+                text-align: center;
+                font-size: 14px;
+                align-items: center;
+            }
+
+        }
+
+
+    }
+}
+
+.section-4 {
+    width: 100%;
+    min-height: 662px;
+    border: 2px solid #33FF00;
+}
+
+.section-5 {
+    width: 100%;
+    min-height: 500px;
+    border: 2px solid #33FF00;
+}
+
+.section-6 {
+    width: 100%;
+    min-height: 463px;
+    border: 2px solid #33FF00;
+}
+
+.section-7 {
+    width: 100%;
+    min-height: 408px;
+    border: 2px solid #33FF00;
+}
+
+.section-8 {
+    width: 100%;
+    min-height: 378px;
+    border: 2px solid #33FF00;
+}
