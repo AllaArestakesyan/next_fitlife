@@ -7,6 +7,16 @@ export default function Home() {
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
 
+    const scrollRef1 = useRef<any>(null);
+    const [isDragging1, setIsDragging1] = useState<boolean>(false);
+    const [startX1, setStartX1] = useState(0);
+    const [scrollLeft1, setScrollLeft1] = useState(0);
+ 
+    const scrollRef2 = useRef<any>(null);
+    const [isDragging2, setIsDragging2] = useState<boolean>(false);
+    const [startX2, setStartX2] = useState(0);
+    const [scrollLeft2, setScrollLeft2] = useState(0);
+
     const onMouseDown = (e: any) => {
         setIsDragging(true);
         setStartX(e.pageX - scrollRef.current.offsetLeft);
@@ -45,6 +55,87 @@ export default function Home() {
 
     const onTouchEnd = () => {
         setIsDragging(false);
+    };
+
+
+    const onMouseDown1 = (e: any) => {
+        setIsDragging1(true);
+        setStartX1(e.pageX - scrollRef.current.offsetLeft);
+        setScrollLeft1(scrollRef.current.scrollLeft);
+    };
+
+    const onMouseLeave1 = () => {
+        setIsDragging1(false);
+    };
+
+    const onMouseUp1 = () => {
+        setIsDragging1(false);
+    };
+
+    const onMouseMove1 = (e: any) => {
+        if (!isDragging1) return;
+        e.preventDefault();
+        const x = e.pageX - scrollRef1.current.offsetLeft;
+        const walk = (x - startX1) * 2; // Adjust scroll speed by multiplying
+        scrollRef1.current.scrollLeft = scrollLeft1 - walk;
+    };
+
+    const onTouchStart1 = (e: any) => {
+        setIsDragging1(true);
+        setStartX1(e.touches[0].pageX - scrollRef1.current.offsetLeft);
+        setScrollLeft1(scrollRef1.current.scrollLeft);
+    };
+
+    const onTouchMove1 = (e: any) => {
+        if (!isDragging1) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - scrollRef1.current.offsetLeft;
+        const walk = (x - startX1) * 2; // Adjust scroll speed by multiplying
+        scrollRef1.current.scrollLeft = scrollLeft1 - walk;
+    };
+
+    const onTouchEnd1 = () => {
+        setIsDragging1(false);
+    };
+    
+    const onMouseDown2 = (e: any) => {
+        setIsDragging2(true);
+        setStartX2(e.pageX - scrollRef.current.offsetLeft);
+        setScrollLeft2(scrollRef.current.scrollLeft);
+    };
+
+    const onMouseLeave2 = () => {
+        setIsDragging2(false);
+    };
+
+    const onMouseUp2 = () => {
+        setIsDragging2(false);
+    };
+
+    const onMouseMove2 = (e: any) => {
+        if (!isDragging2) return;
+        e.preventDefault();
+        const x = e.pageX - scrollRef2.current.offsetLeft;
+        const walk = (x - startX2) * 2; // Adjust scroll speed by multiplying
+        scrollRef2.current.scrollLeft = scrollLeft2 - walk;
+    };
+
+    const onTouchStart2 = (e: any) => {
+        setIsDragging2(true);
+        setStartX2(e.touches[0].pageX - scrollRef2.current.offsetLeft);
+        setScrollLeft2(scrollRef2.current.scrollLeft);
+    };
+
+    const onTouchMove2 = (e: any) => {
+        if (!isDragging2) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - scrollRef2.current.offsetLeft;
+        const walk = (x - startX2) * 2; // Adjust scroll speed by multiplying
+        scrollRef2.current.scrollLeft = scrollLeft2 - walk;
+    };
+
+    const onTouchEnd2 = () => {
+        setIsDragging2(false);
     };
 
     return (
@@ -196,8 +287,166 @@ export default function Home() {
                 </div>
 
             </div>
-            <div className="section-5">section-5</div>
-            <div className="section-6">section-6</div>
+            <div className="section-3">
+                <h2>Yoga</h2>
+                <div
+                    ref={scrollRef1}
+                    onMouseDown={onMouseDown1}
+                    onMouseLeave={onMouseLeave1}
+                    onMouseUp={onMouseUp1}
+                    onMouseMove={onMouseMove1}
+                    onTouchStart={onTouchStart1}
+                    onTouchMove={onTouchMove1}
+                    onTouchEnd={onTouchEnd1}
+                >
+                    <div>
+                        <div>
+                            <img src="/4.jfif" alt="" />
+                        </div>
+                        <div>
+                            <p>
+                                Revitalize Your Routine Try Our Energizing Workouts!
+                            </p>
+                            <img src="/lets-icons_video.png" alt="" />
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="/6.jfif" alt="" />
+                        </div>
+                        <div>
+                            <p>
+                                Revitalize Your Routine Try Our Energizing Workouts!
+                            </p>
+                            <img src="/lets-icons_video.png" alt="" />
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="/8.jfif" alt="" />
+                        </div>
+                        <div>
+                            <p>
+                                Revitalize Your Routine Try Our Energizing Workouts!
+                            </p>
+                            <img src="/lets-icons_video.png" alt="" />
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="/30.png" alt="" />
+                        </div>
+                        <div>
+                            <p>
+                                Revitalize Your Routine Try Our Energizing Workouts!
+                            </p>
+                            <img src="/lets-icons_video.png" alt="" />
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="/20.png" alt="" />
+                        </div>
+                        <div>
+                            <p>
+                                Revitalize Your Routine Try Our Energizing Workouts!
+                            </p>
+                            <img src="/lets-icons_video.png" alt="" />
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="/21.png" alt="" />
+                        </div>
+                        <div>
+                            <p>
+                                Revitalize Your Routine Try Our Energizing Workouts!
+                            </p>
+                            <img src="/lets-icons_video.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="section-6">
+                <h2>What do our customers think</h2>
+                <div
+                    ref={scrollRef2}
+                    onMouseDown={onMouseDown2}
+                    onMouseLeave={onMouseLeave2}
+                    onMouseUp={onMouseUp2}
+                    onMouseMove={onMouseMove2}
+                    onTouchStart={onTouchStart2}
+                    onTouchMove={onTouchMove2}
+                    onTouchEnd={onTouchEnd2}
+                >
+                    <div>
+                        <div>
+                            <img src="/12.jfif" alt="" />
+                            <div>
+                                <span>
+                                    Sarah Smith
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.
+                            </p>
+                            <div>
+                                <img src="/st1.png" alt="" />
+                                <img src="/st1.png" alt="" />
+                                <img src="/st1.png" alt="" />
+                                <img src="/st1.png" alt="" />
+                                <img src="/st0.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="/13.jfif" alt="" />
+                            <div>
+                                <span>
+                                    John Doe
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.
+                            </p>
+                            <div>
+                                <img src="/st1.png" alt="" />
+                                <img src="/st1.png" alt="" />
+                                <img src="/st1.png" alt="" />
+                                <img src="/st1.png" alt="" />
+                                <img src="/st0.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="/1.jfif" alt="" />
+                            <div>
+                                <span>
+                                    Sarah Smith
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.
+                            </p>
+                            <div>
+                                <img src="/st1.png" alt="" />
+                                <img src="/st1.png" alt="" />
+                                <img src="/st1.png" alt="" />
+                                <img src="/st1.png" alt="" />
+                                <img src="/st0.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="section-7">section-7</div>
             <div className="section-8">section-8</div>
 

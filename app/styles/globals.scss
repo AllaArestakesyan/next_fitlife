@@ -371,51 +371,51 @@ nav {
     display: grid;
     padding: 20px;
     font-family: "Istok Web", sans-serif;
+
     h2 {
         padding: 16px 0;
         text-align: center;
         font-size: clamp(25px, 5vw, 40px);
     }
+
     >div {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         gap: 50px;
+
         >div:nth-child(1) {
-            // background-color: $color4;
             width: clamp(200px, 100%, 402px);
-            // border: 2px solid #33FF00;
             height: clamp(200px, 100vw, 402px);
-            // overflow: hidden;
             border-radius: 50%;
-            // width: 402px;
-            // height: 402px;
+
             >img {
-                // width: clamp(200px, 100%, 402px);
                 width: 100%;
-                // width: 393px;
-                // height: 402px;
                 border-radius: 50%;
             }
         }
+
         >div:nth-child(2) {
-            // flex-grow: 1;
             width: clamp(200px, 100%, 868px);
             padding: 0 50px;
-            @media (max-width:500px){
+
+            @media (max-width:500px) {
                 padding: 0 10px;
             }
+
             >div:nth-child(1) {
                 display: grid;
                 justify-content: center;
                 grid-template-columns: repeat(auto-fit, minmax(100px, 247px));
                 gap: 10px;
+
                 >img {
                     width: 100%;
                 }
             }
-            p{
+
+            p {
                 text-align: justify;
                 font-size: 22px;
                 line-height: 31px;
@@ -424,16 +424,81 @@ nav {
     }
 }
 
-.section-5 {
-    width: 100%;
-    min-height: 500px;
-    border: 2px solid #33FF00;
-}
-
 .section-6 {
     width: 100%;
     min-height: 463px;
-    border: 2px solid #33FF00;
+    font-family: "Istok Web", sans-serif;
+    display: grid;
+    padding: 20px;
+
+    h2 {
+        padding: 30px 0;
+        text-align: center;
+        font-size: clamp(25px, 5vw, 40px);
+    }
+
+    >div {
+        width: clamp(200px, 95%, 1199px);
+        gap: 40px;
+        display: grid;
+        margin: auto;
+        overflow: hidden;
+        scrollbar-color: #0000;
+        grid-template-columns: repeat(3, 425px);
+        scroll-behavior: smooth;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
+        >div {
+            border-radius: 8px;
+            background-color: $color5;
+            background: linear-gradient($color5, $color1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 14px 15px;
+
+            >div:nth-child(1) {
+                position: relative;
+
+                >img {
+                    width: 100%;
+                    user-select: none;
+                    cursor: context-menu;
+                    pointer-events: none;
+                    border-radius: 8px;
+                    height: 100%;
+                }
+
+                >div {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: #9d9a9a80;
+                    font-size: 18px;
+                    height: auto;
+                    padding: 10px 0;
+                    text-align: center;
+                    backdrop-filter: blur(40px);
+                    border-radius: 0 0 8px 8px;
+
+                }
+            }
+
+            >div:nth-child(2) {
+                display: grid;
+                align-content: space-between;
+                height: 100%;
+                >div{
+                    display: flex;
+                    justify-content: center;
+                    gap: 5px;
+                }
+            }
+        }
+    }
 }
 
 .section-7 {
