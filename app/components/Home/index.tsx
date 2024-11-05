@@ -21,13 +21,32 @@ export default function Home() {
         setIsDragging(false);
     };
 
-    const onMouseMove = (e:any) => {
+    const onMouseMove = (e: any) => {
         if (!isDragging) return;
         e.preventDefault();
         const x = e.pageX - scrollRef.current.offsetLeft;
         const walk = (x - startX) * 2; // Adjust scroll speed by multiplying
         scrollRef.current.scrollLeft = scrollLeft - walk;
     };
+
+    const onTouchStart = (e: any) => {
+        setIsDragging(true);
+        setStartX(e.touches[0].pageX - scrollRef.current.offsetLeft);
+        setScrollLeft(scrollRef.current.scrollLeft);
+    };
+
+    const onTouchMove = (e: any) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - scrollRef.current.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust scroll speed by multiplying
+        scrollRef.current.scrollLeft = scrollLeft - walk;
+    };
+
+    const onTouchEnd = () => {
+        setIsDragging(false);
+    };
+
     return (
         <>
             <div className="section-1">
@@ -81,7 +100,11 @@ export default function Home() {
                     onMouseDown={onMouseDown}
                     onMouseLeave={onMouseLeave}
                     onMouseUp={onMouseUp}
-                    onMouseMove={onMouseMove}>
+                    onMouseMove={onMouseMove}
+                    onTouchStart={onTouchStart}
+                    onTouchMove={onTouchMove}
+                    onTouchEnd={onTouchEnd}
+                >
                     <div>
                         <div>
                             <img src="/5.jfif" alt="" />
@@ -150,7 +173,29 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="section-4">section-4</div>
+            <div className="section-4">
+                <h2>Information about Diet
+                    one Day</h2>
+                <div>
+                    <div>
+                        <img src='/photo.png' />
+                    </div>
+                    <div>
+                        <div>
+                            <img src='/Frame 44.png' />
+                            <img src='/Frame 45.png' />
+                            <img src='/Frame 46.png' />
+
+                        </div>
+                        <div>
+                            <p>
+                                The number of calories of carbohydrates you need per day can vary depending on factors such as your age, gender, weight, height, activity level, and overall health goals. However, a general guideline for carbohydrate intake is around 45% to 65% of your total daily calorie intake.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <div className="section-5">section-5</div>
             <div className="section-6">section-6</div>
             <div className="section-7">section-7</div>
