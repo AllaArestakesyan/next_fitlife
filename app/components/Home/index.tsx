@@ -11,7 +11,7 @@ export default function Home() {
     const [isDragging1, setIsDragging1] = useState<boolean>(false);
     const [startX1, setStartX1] = useState(0);
     const [scrollLeft1, setScrollLeft1] = useState(0);
- 
+
     const scrollRef2 = useRef<any>(null);
     const [isDragging2, setIsDragging2] = useState<boolean>(false);
     const [startX2, setStartX2] = useState(0);
@@ -97,7 +97,7 @@ export default function Home() {
     const onTouchEnd1 = () => {
         setIsDragging1(false);
     };
-    
+
     const onMouseDown2 = (e: any) => {
         setIsDragging2(true);
         setStartX2(e.pageX - scrollRef.current.offsetLeft);
@@ -141,7 +141,7 @@ export default function Home() {
     return (
         <>
             <div className="section-1">
-                <div className='section-div1'>
+                <div className='section-div1' id='home'>
                     <div>
                         <span>FitLife</span> Your Pathway to Strength Health and Happiness
 
@@ -168,7 +168,7 @@ export default function Home() {
                 <img src="/Frame5.png" alt="" className='im6' />
             </div>
             <div className="section-2">
-                <h2>About Us</h2>
+                <h2 id='about'>About Us</h2>
                 <div>
                     <div>
                         <div>
@@ -185,7 +185,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="section-3">
-                <h2>Workout</h2>
+                <h2 id='workout'>Workout</h2>
                 <div
                     ref={scrollRef}
                     onMouseDown={onMouseDown}
@@ -265,7 +265,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="section-4">
-                <h2>Information about Diet
+                <h2 id='diet'>Information about Diet
                     one Day</h2>
                 <div>
                     <div>
@@ -288,7 +288,7 @@ export default function Home() {
 
             </div>
             <div className="section-3">
-                <h2>Yoga</h2>
+                <h2 id='yoga'>Yoga</h2>
                 <div
                     ref={scrollRef1}
                     onMouseDown={onMouseDown1}
@@ -447,8 +447,73 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="section-7">section-7</div>
-            <div className="section-8">section-8</div>
+            <div className="section-7">
+                <div>
+                    <div>
+                        <h2>Subscribe Us</h2>
+                        <input type="text" placeholder='Enter Email' />
+                        <button>Subscribe</button>
+                    </div>
+                    <div>
+                        <img src="/2.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className="section-8">
+                <div>
+                    <div>
+                        <img src="/icon.png" alt="" />
+                        <p>
+                            Founded by fitness enthusiasts, our mission is to make exercise accessible, enjoyable, and effective for everyone, regardless of their fitness level or background. With a focus on innovation and user-centric design.
+                        </p>
+                        <div>
+                            <img src="/pajamas_twitter.png" alt="" />
+                            <img src="/lets-icons_insta.png" alt="" />
+                            <img src="/iconoir_facebook.png" alt="" />
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Company</h2>
+                        <ul>
+                            <li>Home</li>
+                            <li>Class</li>
+                            <li>Blog</li>
+                            <li>Trainers</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Category</h2>
+                        <ul>
+                            <li>Strength Trainings</li>
+                            <li>Body Building</li>
+                            <li>Basic Yoga</li>
+                            <li>Weight Lost</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Contact Us</h2>
+                        <ul className='ul1'>
+                            <li>
+                                <img src="/ph_phone-light.png" alt="" />
+                                <span>256 897 245</span>
+                            </li>
+                            <li>
+                                <img src="/material-symbols-light_mail-outline.png" alt="" />
+                                <span>FitLife@gmail.com</span>
+                            </li>
+                            <li>
+                                <img src="/mynaui_location.png" alt="" />
+                                <span>Tigran Mets 45</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div>
+                    <img src="/footer.png" alt="" />
+                    <p>Copyright2024.All rights reserved@FitLife</p>
+                </div>
+            </div>
 
         </>
     )

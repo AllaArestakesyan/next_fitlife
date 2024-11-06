@@ -11,6 +11,7 @@ $color6: #d9d9d9;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: "Istok Web", sans-serif;
 }
 
 nav {
@@ -111,7 +112,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Istok Web", sans-serif;
+
     gap: 20px;
     flex-wrap: wrap;
     padding: 20px 10px;
@@ -212,19 +213,23 @@ nav {
         bottom: 20%;
         left: 40%;
     }
+
+    img {
+        pointer-events: none;
+    }
 }
 
 .section-2 {
     width: 100%;
     min-height: 652px;
-    font-family: "Istok Web", sans-serif;
+
     display: grid;
     padding: 20px;
 
     h2 {
         padding: 58px 0;
         text-align: center;
-        font-size: clamp(25px, 5vw, 40px);
+        font-size: clamp(20px, 5vw, 40px);
     }
 
     >div {
@@ -246,6 +251,7 @@ nav {
                 right: -230px;
                 top: 50px;
                 width: clamp(100px, 60%, 307px);
+                pointer-events: none;
 
                 @media (max-width:970px) {
                     right: -190px;
@@ -291,6 +297,8 @@ nav {
             img {
                 border-radius: 80px 0;
                 width: 100%;
+                pointer-events: none;
+
             }
         }
 
@@ -302,12 +310,12 @@ nav {
     min-height: 497px;
     display: grid;
     padding: 20px;
-    font-family: "Istok Web", sans-serif;
+
 
     h2 {
         padding: 58px 0;
         text-align: center;
-        font-size: clamp(25px, 5vw, 40px);
+        font-size: clamp(20px, 5vw, 40px);
     }
 
     >div {
@@ -370,12 +378,12 @@ nav {
     min-height: 662px;
     display: grid;
     padding: 20px;
-    font-family: "Istok Web", sans-serif;
+
 
     h2 {
         padding: 16px 0;
         text-align: center;
-        font-size: clamp(25px, 5vw, 40px);
+        font-size: clamp(20px, 5vw, 40px);
     }
 
     >div {
@@ -393,6 +401,7 @@ nav {
             >img {
                 width: 100%;
                 border-radius: 50%;
+                pointer-events: none;
             }
         }
 
@@ -412,6 +421,7 @@ nav {
 
                 >img {
                     width: 100%;
+                    pointer-events: none;
                 }
             }
 
@@ -427,14 +437,14 @@ nav {
 .section-6 {
     width: 100%;
     min-height: 463px;
-    font-family: "Istok Web", sans-serif;
+
     display: grid;
     padding: 20px;
 
     h2 {
         padding: 30px 0;
         text-align: center;
-        font-size: clamp(25px, 5vw, 40px);
+        font-size: clamp(20px, 5vw, 40px);
     }
 
     >div {
@@ -491,7 +501,8 @@ nav {
                 display: grid;
                 align-content: space-between;
                 height: 100%;
-                >div{
+
+                >div {
                     display: flex;
                     justify-content: center;
                     gap: 5px;
@@ -504,11 +515,141 @@ nav {
 .section-7 {
     width: 100%;
     min-height: 408px;
-    border: 2px solid #33FF00;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    >div {
+        background: linear-gradient($color5, $color1);
+        display: flex;
+        flex-wrap: wrap;
+        width: clamp(100px, 95%, 1027px);
+        border-radius: 120px 18px;
+        border: 1px solid rgb(105, 105, 107);
+        justify-content: center;
+        align-items: center;
+        gap: 50px 140px;
+        padding: 10px;
+
+        >div:nth-child(1) {
+            display: grid;
+            width: clamp(100px, 100%, 395px);
+
+            h2 {
+                padding: 16px 0;
+                text-align: center;
+                font-size: clamp(20px, 5vw, 40px);
+            }
+
+            button {
+                background-color: $color2;
+                border-radius: 4px;
+                color: $color1;
+                font-size: 22px;
+                padding: 12px;
+                width: 100%;
+            }
+
+            input {
+                border-radius: 4px;
+                font-size: 22px;
+                text-align: center;
+                padding: 12px;
+                width: 100%;
+
+                &::placeholder {
+                    text-align: center;
+                }
+            }
+
+        }
+
+        >div:nth-child(2) {
+            width: clamp(100px, 90%, 335px);
+
+            img {
+                width: 100%;
+                transform: rotateY(180deg);
+                pointer-events: none;
+
+            }
+        }
+    }
 }
 
 .section-8 {
-    width: 100%;
+    width: clamp(200px, 95%, 1199px);
     min-height: 378px;
-    border: 2px solid #33FF00;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 10px 0px;
+
+    >div:nth-child(1) {
+        display: flex;
+        flex-wrap: wrap;
+        // border: 2px solid hsl(108, 100%, 50%);
+        flex-grow: 1;
+        gap: 30px;
+        justify-content: space-between;
+        @media (max-width:600px){
+            flex-direction: column;
+        }
+
+        h2 {
+            padding: 10px 0 15px;
+            text-align: center;
+            font-size: clamp(20px, 5vw, 32px);
+            text-align: start;
+        }
+
+        >div:nth-child(1) {
+            width: clamp(100px, 90%, 325px);
+            display: grid;
+            gap: 15px;
+
+            >img {
+                width: clamp(100px, 90%, 180px);
+            }
+
+            p {
+                font-size: clamp(12px, 5vw, 18px);
+            }
+
+            >div {
+                display: flex;
+                gap: 18px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+        ul {
+            display: grid;
+            gap: 10px;
+            font-size: clamp(16px, 2vw, 24px);
+
+        }
+
+        .ul1 {
+            li {
+                display: flex;
+                gap: 3px;
+            }
+        }
+    }
+
+    >div:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        width: 100%;
+        // width: clamp(200px, 95%, 1199px);
+        border-top: 1px solid #3e3e3e;
+    }
 }
