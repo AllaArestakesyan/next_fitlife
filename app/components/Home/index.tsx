@@ -397,7 +397,7 @@ export default function Home() {
                                 <img src="/st1.png" alt="" />
                                 <img src="/st1.png" alt="" />
                                 <img src="/st1.png" alt="" />
-                                <img src="/st0.png" alt="" />
+                                <img src="/st1.png" alt="" />
                             </div>
                         </div>
                     </div>
