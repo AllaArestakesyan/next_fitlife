@@ -33,6 +33,7 @@ export default function Home() {
 
     const onMouseMove = (e: any) => {
         if (!isDragging) return;
+        console.log("...........");
         e.preventDefault();
         const x = e.pageX - scrollRef.current.offsetLeft;
         const walk = (x - startX) * 2; // Adjust scroll speed by multiplying
@@ -47,7 +48,7 @@ export default function Home() {
 
     const onTouchMove = (e: any) => {
         if (!isDragging) return;
-        e.preventDefault();
+        // e.preventDefault();
         const x = e.touches[0].pageX - scrollRef.current.offsetLeft;
         const walk = (x - startX) * 2; // Adjust scroll speed by multiplying
         scrollRef.current.scrollLeft = scrollLeft - walk;
@@ -88,7 +89,7 @@ export default function Home() {
 
     const onTouchMove1 = (e: any) => {
         if (!isDragging1) return;
-        e.preventDefault();
+        // e.preventDefault();
         const x = e.touches[0].pageX - scrollRef1.current.offsetLeft;
         const walk = (x - startX1) * 2; // Adjust scroll speed by multiplying
         scrollRef1.current.scrollLeft = scrollLeft1 - walk;
@@ -128,7 +129,7 @@ export default function Home() {
 
     const onTouchMove2 = (e: any) => {
         if (!isDragging2) return;
-        e.preventDefault();
+        // e.preventDefault();
         const x = e.touches[0].pageX - scrollRef2.current.offsetLeft;
         const walk = (x - startX2) * 2; // Adjust scroll speed by multiplying
         scrollRef2.current.scrollLeft = scrollLeft2 - walk;
