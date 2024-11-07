@@ -185,6 +185,8 @@ export default function Home() {
                 </div>
             </div>
             <div className="section-3">
+                <img src="/Frame (4).png" alt="" className='im5' />
+
                 <h2 id='workout'>Workout</h2>
                 <div
                     ref={scrollRef}
@@ -265,6 +267,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="section-4">
+                <img src="/Frame (4).png" alt="" className='im5' />
                 <h2 id='diet'>Information about Diet
                     one Day</h2>
                 <div>
@@ -289,6 +292,7 @@ export default function Home() {
             </div>
             <div className="section-3">
                 <h2 id='yoga'>Yoga</h2>
+                <img src="/Frame (4).png" alt="" className='im4' />
                 <div
                     ref={scrollRef1}
                     onMouseDown={onMouseDown1}
@@ -368,6 +372,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="section-6">
+                <img src="/Frame (4).png" alt="" className='im4' />
                 <h2>What do our customers think</h2>
                 <div
                     ref={scrollRef2}
@@ -448,6 +453,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="section-7">
+                <img src="/Frame (4).png" alt="" className='im4' />
                 <div>
                     <div>
                         <h2>Subscribe Us</h2>
